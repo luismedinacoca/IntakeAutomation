@@ -64,6 +64,7 @@ public class Intake{
     }
 
     //*************** SHIPMENTS ****************
+
     //Click on Shipments Module button
     public void goToShipments(){
         Shipments ship = new Shipments(driver);
@@ -92,9 +93,91 @@ public class Intake{
         ship.selectClient(client);
     }
 
+    public void selectReceiverDropdown(String receiver){
+        Shipments ship = new Shipments(driver);
+        ship.selectReceiver(receiver);
+    }
+
+    public void populateTurnAroundDays(String days){
+        Shipments ship = new Shipments(driver);
+        ship.enterTurnAroundDays(days);
+    }
+
+    public void clickOnShipmentEditorSaveButton(){
+        Shipments ship = new Shipments(driver);
+        ship.clickSaveShipmentButton();
+    }
+
+    public void clickPlusLocationField(){
+        Shipments ship = new Shipments(driver);
+        ship.clickLocation();
+    }
+
+    public void populateUPCField(String upcNumber){
+        Shipments ship = new Shipments(driver);
+        ship.enterUPCnumber(upcNumber);
+    }
+
+    public void clickOnAddUPCToShipmentButton(){
+        Shipments ship = new Shipments(driver);
+        ship.addUPCtoShipment();
+    }
+
+    public void clickOnCompleteShipmentButton(){
+        Shipments ship = new Shipments(driver);
+        ship.clickCompleteShipmentButton();
+    }
+
+
+
+
 
     //*************** SCHEDULING ****************
-    //Click on Scheduling Module button
+
+
+
+
+    //*************** MEASURING ****************
+
+
+
+
+    //*************** PHOTOGRAPHY ****************
+
+
+
+
+    //*************** CODING ****************
+
+
+
+
+
+    //*************** CODING-QA ****************
+
+
+
+
+    //*************** IMAGE EDITING ****************
+
+
+
+
+
+    //*************** IMAGE EDITING-QA ****************
+
+
+
+
+
+
+    //*************** FINAL QA ****************
+
+
+
+
+
+    //*******************  JUMPING DIFFERENT MODUL - Click on Scheduling Module button *************************
     public void goToScheduling(){
         Scheduling sched = new Scheduling(driver);
         sched.clickSchedulingModuleButton();
@@ -145,7 +228,5 @@ public class Intake{
         FinalQA fin = new FinalQA(driver);
         fin.clickFinalQAModuleButton();
     }
-
-
 
 }
